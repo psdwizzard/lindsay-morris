@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lindsay Morris, a Richmond writer and performer: five short stories and a stage play, in full.">
+<title>Lindsay Morris, Manuscript mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Manuscript stack · genre: editorial · theme: custom · job: listen (read) · idea: "the site is her submission manuscript: contact top left, word count top right, title halfway down" · vibe: "a writer's own pages, sharp and funny"
+ * paper: oklch(21% 0.008 260) desk under oklch(98.5% 0.003 95) sheets · accent: oklch(52% 0.2 27) editor's red · display: Courier Prime · body: Literata · hero: the title page of a manuscript, its header is the nav · nav: the manuscript header · footer: n/a (mockup) · imagery: none, words are the material · signature: standard manuscript format as the page's whole grammar
+ * axes: dark/mono/chromatic-red · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P3 H3 E3 S3 R2 V3 · weakest: R, only two sheets in a mockup; the full build adds the bio and credits as further pages */
+@import url("./tokens.css");
+@import url("./base.css");
+
+body { color: var(--color-desk-ink); padding-block: var(--space-xl) var(--space-3xl); }
+.sheet { background: var(--color-sheet); color: var(--color-ink); max-width: 68rem; margin-inline: auto; padding: var(--space-2xl) clamp(var(--space-lg), 7vw, 7rem); position: relative; }
+.sheet + .sheet { margin-top: var(--space-xl); }
+.mono { font-family: var(--font-display); }
+a { text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; transition: text-decoration-thickness var(--dur-micro); }
+a:hover { text-decoration-thickness: 2px; }
+a:focus-visible { outline-color: var(--color-focus); }
+
+/* the manuscript header doubles as the nav */
+.ms-head { display: flex; justify-content: space-between; gap: var(--space-xl); font: 400 var(--text-md)/1.5 var(--font-display); }
+.ms-head address { font-style: normal; }
+.ms-head .home { text-decoration: none; font-weight: 700; }
+.ms-head nav ul { list-style: none; margin: var(--space-xs) 0 0; padding: 0; display: flex; gap: var(--space-lg); justify-content: flex-end; }
+.ms-head .count { text-align: right; }
+
+.title-page { min-height: calc(100svh - 2 * var(--space-xl)); display: grid; grid-template-rows: auto 1fr; }
+.title-block { align-self: center; text-align: center; padding-block: var(--space-2xl); }
+.title-block h1 { font: 700 clamp(2.5rem, 6vw, 5.5rem)/1.05 var(--font-display); letter-spacing: -0.03em; max-width: 16ch; margin-inline: auto; }
+.title-block .by { font: 400 var(--text-lead)/1.5 var(--font-display); margin: var(--space-lg) auto 0; max-width: 34ch; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: var(--space-sm); margin-top: var(--space-xl); }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--space-lg); font: 700 var(--text-md)/1 var(--font-display); text-decoration: none; border: 2px solid var(--color-ink); color: var(--color-ink); background: transparent; transition: background-color var(--dur-micro), color var(--dur-micro); }
+.btn--primary { background: var(--color-ink); color: var(--color-sheet); }
+.btn:hover { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn:active { transform: translateY(1px); }
+
+.runhead { position: absolute; top: var(--space-lg); right: clamp(var(--space-lg), 7vw, 7rem); font: 400 var(--text-sm)/1 var(--font-display); color: var(--color-muted); }
+.sheet h2 { font: 700 var(--text-2xl)/1.2 var(--font-display); text-align: center; margin: var(--space-lg) auto var(--space-2xl); }
+.toc { list-style: none; margin: 0; padding: 0; }
+.toc li + li { margin-top: var(--space-xl); }
+.toc a { display: block; text-decoration: none; }
+.toc .row { display: flex; align-items: baseline; gap: var(--space-sm); font: 400 var(--text-xl)/1.3 var(--font-display); }
+.toc .row .t { text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+.toc a:hover .t { text-decoration-thickness: 2px; }
+.toc .lead-dots { flex: 1; border-bottom: 2px dotted var(--color-rule); transform: translateY(-0.3em); min-width: 2rem; }
+.toc .w { font-size: var(--text-md); white-space: nowrap; }
+.toc .first { font: italic 400 var(--text-lead)/1.5 var(--font-body); color: var(--color-ink-2); margin-top: var(--space-xs); max-width: 52ch; }
+.toc .g { font: 400 var(--text-sm)/1.4 var(--font-display); color: var(--color-muted); margin-top: var(--space-2xs); }
+.note { margin-top: var(--space-2xl); font: 400 var(--text-sm)/1.5 var(--font-display); color: var(--color-muted); text-align: center; }
+
+@media (max-width: 40rem) {
+  body { padding-block: 0; }
+  .sheet { padding: var(--space-lg) var(--space-md) var(--space-2xl); }
+  .ms-head { flex-direction: column; gap: var(--space-md); font-size: var(--text-sm); }
+  .ms-head .count, .ms-head nav ul { text-align: left; justify-content: flex-start; }
+  .title-page { min-height: 0; }
+  .toc .row { font-size: var(--text-lg); }
+  .runhead { right: var(--space-md); }
+}
+</style>
+</head>
+<body>
+<main>
+  <section class="sheet title-page">
+    <header class="ms-head">
+      <address><a class="home" href="#">Lindsay Morris</a><br>Richmond, Virginia<br><a href="mailto:Lindzymorris@gmail.com">Lindzymorris@gmail.com</a></address>
+      <div class="count">About 27,100 words
+        <nav aria-label="Main"><ul><li><a href="#contents">Contents</a></li><li><a href="#">About</a></li></ul></nav>
+      </div>
+    </header>
+    <div class="title-block">
+      <h1>Five stories and a play</h1>
+      <p class="by">by Lindsay Morris, writer and performer in Richmond, Virginia</p>
+      <div class="actions"><a class="btn btn--primary" href="#contents">Start reading</a><a class="btn" href="mailto:Lindzymorris@gmail.com">Email Lindsay</a></div>
+    </div>
+  </section>
+
+  <section class="sheet" id="contents" aria-labelledby="toc-h">
+    <span class="runhead">Morris / Contents / 2</span>
+    <h2 id="toc-h">Contents</h2>
+    <ol class="toc">
+      <li><a href="#"><div class="row"><span class="t">Lucky Boy</span><span class="lead-dots"></span><span class="w">4,977 words</span></div><p class="first">Joey can’t stop pissing himself.</p><p class="g">Speculative fiction</p></a></li>
+      <li><a href="#"><div class="row"><span class="t">Cruella De Raven</span><span class="lead-dots"></span><span class="w">1,624 words</span></div><p class="first">The smell of varnish has crept north, up from the theater stage.</p><p class="g">Dark comedy</p></a></li>
+      <li><a href="#"><div class="row"><span class="t">Crumb-Struck</span><span class="lead-dots"></span><span class="w">3,399 words</span></div><p class="first">The morning meeting is just starting as I peel off my coat.</p><p class="g">Literary satire</p></a></li>
+      <li><a href="#"><div class="row"><span class="t">Sushi, Please?</span><span class="lead-dots"></span><span class="w">5,570 words</span></div><p class="first">I stopped looking in mirrors a few months ago.</p><p class="g">Literary fiction</p></a></li>
+      <li><a href="#"><div class="row"><span class="t">The Flying Nun</span><span class="lead-dots"></span><span class="w">2,050 words</span></div><p class="first">I had to pee and I was afraid to die, in that order.</p><p class="g">Absurdist comedy</p></a></li>
+      <li><a href="#"><div class="row"><span class="t">We Won’t Fight</span><span class="lead-dots"></span><span class="w">75 pages</span></div><p class="first">What pairs well with Xanax?</p><p class="g">A full-length stage play</p></a></li>
+    </ol>
+    <p class="note">Some pieces contain strong language, drug use and sexual content.</p>
+  </section>
+</main>
+</body>
+</html>

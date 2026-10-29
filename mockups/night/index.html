@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lindsay Morris, a Richmond writer and performer: five short stories and a stage play, in full.">
+<title>Lindsay Morris, Night Edition mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: First Lines · genre: editorial · theme: custom · job: listen (read) · idea: "every piece is sold by its first line, set as large as a headline" · vibe: "late-night reading, funny and a little dangerous"
+ * paper: oklch(15.5% 0.012 55) · accent: oklch(80% 0.13 78) lamplight · display: Gloock · body: Literata · hero: one story's opening line as the headline · nav: edge-aligned, name and three links · footer: n/a (mockup) · imagery: none, words are the material · signature: an index made only of first lines
+ * axes: dark/high-contrast-serif/warm · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P3 H3 E3 S3 R2 V3 · weakest: R, all first lines share one composition; the full build gives the play a script page */
+@import url("./tokens.css");
+@import url("./base.css");
+
+a { text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+a:hover { text-decoration-thickness: 2px; }
+.nav { display: flex; align-items: baseline; justify-content: space-between; gap: var(--space-lg); padding-block: var(--space-lg); }
+.wordmark { font: 400 var(--text-xl)/1 var(--font-display); text-decoration: none; white-space: nowrap; }
+.nav ul { display: flex; gap: var(--space-lg); list-style: none; margin: 0; padding: 0; font-size: var(--text-sm); }
+.nav a { white-space: nowrap; }
+
+.hero { min-height: calc(100svh - 80px); display: grid; align-content: center; padding-block: var(--space-2xl); }
+.hero h1 { font: 400 clamp(3.25rem, 9.5vw, 9.5rem)/0.98 var(--font-display); letter-spacing: -0.025em; max-width: 13ch; }
+.hero .lead { margin-top: var(--space-xl); color: var(--color-ink-2); }
+.hero .lead cite { font-style: italic; color: var(--color-ink); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.btn { display: inline-flex; align-items: center; min-height: 48px; padding: 0 var(--space-lg); font: 500 var(--text-md)/1 var(--font-body); text-decoration: none; border: 1px solid var(--color-ink-2); border-radius: 0; color: var(--color-ink); transition: background-color var(--dur-micro), color var(--dur-micro), border-color var(--dur-micro); }
+.btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn:hover { background: var(--color-paper-3); }
+.btn--primary:hover { background: var(--color-ink); border-color: var(--color-ink); }
+.btn:active { transform: translateY(1px); }
+
+.lines { border-top: 1px solid var(--color-rule); padding-block: var(--space-3xl); }
+.lines h2 { font: 400 var(--text-section)/1.05 var(--font-display); }
+.lines ol { list-style: none; margin: var(--space-2xl) 0 0; padding: 0; }
+.lines li { border-top: 1px solid var(--color-rule); }
+.lines a { display: grid; grid-template-columns: minmax(0, 8fr) minmax(0, 3fr); gap: var(--space-xl); align-items: baseline; padding-block: var(--space-xl); text-decoration: none; transition: color var(--dur-micro); }
+.lines .q { font: 400 clamp(1.75rem, 3.4vw, 3.25rem)/1.1 var(--font-display); }
+.lines a:hover .q { color: var(--color-accent); }
+.lines .meta b { display: block; font-weight: 500; text-decoration: underline; text-decoration-color: var(--color-accent); text-underline-offset: 0.2em; }
+.lines .meta span { color: var(--color-muted); font-size: var(--text-sm); }
+.lines .note { margin-top: var(--space-xl); color: var(--color-muted); font-size: var(--text-sm); }
+
+@media (max-width: 40rem) {
+  .nav ul { gap: var(--space-md); } .nav li:nth-child(2) { display: none; }
+  .lines a { grid-template-columns: minmax(0, 1fr); gap: var(--space-sm); }
+}
+</style>
+</head>
+<body>
+<header class="container nav">
+  <a class="wordmark" href="#">Lindsay Morris</a>
+  <ul><li><a href="#work">The work</a></li><li><a href="#">About</a></li><li><a href="#">Contact</a></li></ul>
+</header>
+<main>
+  <section class="container hero">
+    <h1>Joey can’t stop pissing himself.</h1>
+    <p class="lead">So begins <cite>Lucky Boy</cite>, one of five stories and a play.</p>
+    <div class="actions"><a class="btn btn--primary" href="#">Keep reading</a><a class="btn" href="#work">See all the work</a></div>
+  </section>
+  <section class="container lines" id="work">
+    <h2>Start anywhere.</h2>
+    <ol>
+      <li><a href="#"><span class="q">I had to pee and I was afraid to die, in that order.</span><span class="meta"><b>The Flying Nun</b><span>Absurdist comedy, 9 min</span></span></a></li>
+      <li><a href="#"><span class="q">I stopped looking in mirrors a few months ago.</span><span class="meta"><b>Sushi, Please?</b><span>Literary fiction, 24 min</span></span></a></li>
+      <li><a href="#"><span class="q">What pairs well with Xanax?</span><span class="meta"><b>We Won’t Fight</b><span>Stage play, 75 pages</span></span></a></li>
+      <li><a href="#"><span class="q">The morning meeting is just starting as I peel off my coat.</span><span class="meta"><b>Crumb-Struck</b><span>Literary satire, 15 min</span></span></a></li>
+      <li><a href="#"><span class="q">The smell of varnish has crept north, up from the theater stage.</span><span class="meta"><b>Cruella De Raven</b><span>Dark comedy, 7 min</span></span></a></li>
+    </ol>
+    <p class="note">Some pieces contain strong language, drug use and sexual content.</p>
+  </section>
+</main>
+</body>
+</html>

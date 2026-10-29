@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Lindsay Morris, a Richmond writer and performer: five short stories and a stage play, in full.">
+<title>Lindsay Morris · Almanac mockup</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+/* Hallmark · shape: Index-First · genre: editorial · theme: Almanac (deal 2/3, seed writing-portfolio-lindsay-morris-c835·00d57d51·2026-10-29·r0) · job: listen (read) · draw: manual
+ * hero: Stage, head left and the contents page on the sheet right · nav: edge-aligned, wordmark and three links · footer: n/a (hero mockup) · imagery: none, words are the material · signature: the contents page set as a printed table, word counts in mono
+ * axes: mid/grotesk-sans/chromatic-magenta · posture: restrained · contrast: pass · fold: pass · v2.0.0 */
+/* Hallmark · pre-emit critique: P3 H3 E3 S2 R3 V3 · weakest: S, the contents table is exact but cool for comedy; the opening lines carry the voice */
+@import url("./tokens.css");
+@import url("./base.css");
+
+body { color: var(--color-ink-2); }
+h1, h2 { color: var(--color-ink); }
+.nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-lg); padding-block: var(--space-md); border-bottom: var(--rule-bar) solid var(--color-ink); }
+.wordmark { font: 600 var(--text-lg)/1 var(--font-display); color: var(--color-ink); text-decoration: none; }
+.nav ul { display: flex; gap: var(--space-lg); list-style: none; margin: 0; padding: 0; font: 500 var(--text-sm)/1 var(--font-display); }
+.nav a { color: var(--color-ink); text-decoration-color: var(--color-accent); }
+
+.hero { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: var(--space-2xl); align-items: center; min-height: calc(100svh - 64px); padding-block: var(--space-2xl); }
+.hero h1 { font-size: clamp(3rem, 6vw, 5.5rem); letter-spacing: -0.035em; line-height: 0.95; }
+.hero .lead { margin-top: var(--space-lg); }
+.actions { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-xl); }
+.btn { display: inline-block; text-decoration: none; border: var(--rule-hair) solid var(--color-ink); border-radius: var(--radius-pill); padding: var(--space-sm) var(--space-lg); font: 500 var(--text-sm)/1 var(--font-display); color: var(--color-ink); background: transparent; transition: background-color .15s, border-color .15s; }
+.btn:hover { background: var(--color-paper-2); }
+.btn--primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-accent-ink); }
+.btn--primary:hover { background: var(--color-accent-2); }
+.btn:active { transform: translateY(1px); }
+
+.sheet { background: var(--color-sheet); border-top: var(--rule-bar) solid var(--color-ink); padding: var(--space-lg) var(--space-xl) var(--space-md); }
+.sheet-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-md); }
+.sheet-head h2 { font-size: var(--text-xl); }
+.sheet-head span { font-family: var(--font-body); font-size: var(--text-lg); }
+table { width: 100%; border-collapse: collapse; margin-top: var(--space-md); }
+thead th { font: 500 var(--text-sm)/1.3 var(--font-body); color: var(--color-muted); text-align: left; padding: var(--space-xs) 0; border-bottom: var(--rule-bar) solid var(--color-rule-2); }
+td { border-top: var(--rule-hair) solid var(--color-rule); padding: var(--space-sm) var(--space-sm) var(--space-sm) 0; vertical-align: baseline; }
+th.num, td.num { font-family: var(--font-outlier); text-align: right; font-size: var(--text-sm); padding-right: 0; }
+td.no { font-family: var(--font-outlier); font-size: var(--text-sm); width: 3.5rem; }
+td a { color: var(--color-ink); font-weight: 500; text-decoration-color: var(--color-accent); }
+td a:hover { text-decoration-thickness: 2px; }
+td .g { display: block; color: var(--color-muted); font-size: var(--text-sm); }
+tr.mark td, tr.mark td a { color: var(--color-accent); }
+.sheet-foot { display: flex; justify-content: space-between; gap: var(--space-md); border-top: var(--rule-hair) solid var(--color-rule); margin-top: var(--space-xs); padding-top: var(--space-sm); font-style: italic; font-size: var(--text-sm); color: var(--color-muted); }
+
+.band--ink { background: var(--color-ink); color: var(--color-paper); padding-block: var(--space-3xl); }
+.band--ink h2 { color: var(--color-sheet); }
+.lines { list-style: none; margin: var(--space-xl) 0 0; padding: 0; columns: 2; column-gap: var(--space-2xl); }
+.lines li { break-inside: avoid; border-top: var(--rule-hair) solid var(--color-ink-2); padding-block: var(--space-md); font-size: var(--text-lead); }
+.lines cite { display: block; font: 500 var(--text-sm)/1.4 var(--font-display); font-style: normal; color: var(--color-paper-3); margin-top: var(--space-2xs); }
+
+@media (max-width: 60rem) { .hero { grid-template-columns: minmax(0, 1fr); min-height: 0; } .lines { columns: 1; } }
+@media (max-width: 40rem) { .sheet { padding-inline: var(--space-md); } .col-g { display: none; } }
+
+@media (max-width: 40rem) { .nav ul { gap: var(--space-md); } .nav li:nth-child(2) { display: none; } }
+.wordmark, .nav a { white-space: nowrap; }
+</style>
+</head>
+<body>
+<header class="container nav">
+  <a class="wordmark" href="#">Lindsay Morris</a>
+  <ul><li><a href="#work">The work</a></li><li><a href="#">Credits</a></li><li><a href="#">Contact</a></li></ul>
+</header>
+<main>
+  <section class="container hero">
+    <div>
+      <h1>Five stories and a play.</h1>
+      <p class="lead">Fiction, plays and live storytelling from a Richmond writer and performer.</p>
+      <div class="actions"><a class="btn btn--primary" href="#work">Start reading</a><a class="btn" href="#">Get in touch</a></div>
+    </div>
+    <div class="sheet">
+      <div class="sheet-head"><h2>Contents</h2></div>
+      <table>
+        <thead><tr><th scope="col">No.</th><th scope="col">Title</th><th scope="col" class="num">Words</th><th scope="col" class="num">Read</th></tr></thead>
+        <tbody>
+          <tr><td class="no">01</td><td><a href="#">Lucky Boy</a></td><td class="num">4,977</td><td class="num">22 min</td></tr>
+          <tr><td class="no">02</td><td><a href="#">Cruella De Raven</a></td><td class="num">1,624</td><td class="num">7 min</td></tr>
+          <tr><td class="no">03</td><td><a href="#">Crumb-Struck</a></td><td class="num">3,399</td><td class="num">15 min</td></tr>
+          <tr><td class="no">04</td><td><a href="#">Sushi, Please?</a></td><td class="num">5,570</td><td class="num">24 min</td></tr>
+          <tr><td class="no">05</td><td><a href="#">The Flying Nun</a></td><td class="num">2,050</td><td class="num">9 min</td></tr>
+          <tr class="mark"><td class="no">06</td><td><a href="#">We Won’t Fight</a></td><td class="num">9,497</td><td class="num">41 min</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section class="band--ink" id="work">
+    <div class="container">
+      <h2>How each one opens.</h2>
+      <ul class="lines">
+        <li>Joey can’t stop pissing himself.<cite>Lucky Boy</cite></li>
+        <li>I had to pee and I was afraid to die, in that order.<cite>The Flying Nun</cite></li>
+        <li>I stopped looking in mirrors a few months ago.<cite>Sushi, Please?</cite></li>
+        <li>The morning meeting is just starting as I peel off my coat.<cite>Crumb-Struck</cite></li>
+      </ul>
+    </div>
+  </section>
+</main>
+</body>
+</html>

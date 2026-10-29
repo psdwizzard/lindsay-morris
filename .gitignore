@@ -1,0 +1,5 @@
+.DS_Store
+.hallmark/
+**/.hallmark/
+node_modules/
+tools/raw.txt

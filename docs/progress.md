@@ -5,6 +5,6 @@
 - [x] 3. Themes rejected → custom Manuscript direction chosen
 - [x] 4. Build site in chosen theme
 - [x] 5. Verify (sloplint --render, file://, reviewer)
-- [ ] 6. Deploy to psdwizzard/lindsay-morris via GitHub Pages
+- [x] 6. Deployed: https://psdwizzard.github.io/lindsay-morris/
 
 Pending from Kenneth: headshot, publication/social URLs.

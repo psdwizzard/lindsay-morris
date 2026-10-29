@@ -141,7 +141,7 @@ a:hover { text-decoration-thickness: 2px; }
   .ms-head { flex-direction: column; gap: var(--space-md); font-size: var(--text-sm); }
   .ms-head .count { text-align: left; }
   .ms-head nav ul { justify-content: flex-start; }
-  .title-page { min-height: 0; }
+  .title-page { min-height: 100svh; }
   .toc .row { font-size: var(--text-lg); }
   .runhead { right: var(--space-md); top: var(--space-md); }
   .about--photo { grid-template-columns: minmax(0, 1fr); }

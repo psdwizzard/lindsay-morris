@@ -1,5 +1,9 @@
 # Dev blog
 
+## 2026-10-29: Lindsay's feedback on the hero
+- Headline is now "Lindsay Morris’s portfolio" (was "Five stories and a play", which she felt boxed her in). New byline: "Lindsay Morris is an author, playwright and performer in Richmond, Virginia."
+- On phones the title sheet now fills the screen (`min-height: 100svh`), so it no longer stops short with a strip of desk showing.
+
 ## 2026-10-29: first build, Manuscript design, deployed to GitHub Pages
 - Installed the Hallmark design skill globally and puppeteer-core for its render checks.
 - Extracted the 133-page PDF with PDFKit. `tools/extract.mjs` produces structured stories and a script-formatted play. Word counts match the source exactly for all five stories.

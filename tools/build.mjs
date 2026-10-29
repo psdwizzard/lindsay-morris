@@ -83,15 +83,15 @@ function credit(c) {
   return `<li><span class="yrs">${esc(c.years.replace('–', ' to '))}</span><div><h3>${esc(c.company)}</h3><p class="where">${esc(c.city)}, ${esc(c.roles.toLowerCase())}</p><p>${desc}</p></div></li>`;
 }
 
-const index = `${head({ title: `${P.name}, writer and performer`, description: `${P.name} is a writer and performer in ${P.location}. Read five of her short stories and her stage play, We Won’t Fight, in full.` })}
+const index = `${head({ title: `${P.name}’s portfolio`, description: `${P.name} is an author, playwright and performer in ${P.location}. Read her short fiction and her stage play, We Won’t Fight.` })}
 <body>
 <a class="skip" href="#contents">Skip to the contents</a>
 <main>
   <section class="sheet title-page">
     ${msHead({ rel: '', right: about(total), nav: '<li><a href="#contents">Contents</a></li><li><a href="#about">About</a></li><li><a href="#stage">Stage</a></li>' })}
     <div class="title-block">
-      <h1>Five stories and a play</h1>
-      <p class="by">by ${esc(P.name)}, writer and performer in ${esc(P.location)}</p>
+      <h1>${esc(P.name)}’s portfolio</h1>
+      <p class="by">${esc(P.name)} is an author, playwright and performer in ${esc(P.location)}.</p>
       <div class="actions"><a class="btn btn--primary" href="#contents">Start reading</a><a class="btn" href="mailto:${P.email}">Email Lindsay</a></div>
     </div>
   </section>
